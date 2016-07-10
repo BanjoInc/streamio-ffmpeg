@@ -205,7 +205,7 @@ module FFMPEG
 
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = url.port == 443
-      http.request_head(url.path)
+      http.request_head(url)
     rescue SocketError, Errno::ECONNREFUSED
       nil
     end
